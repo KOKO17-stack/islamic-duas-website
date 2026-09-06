@@ -127,14 +127,14 @@ a:hover{color:var(--gold)}
 }
 .hero-badge .dot{width:8px;height:8px;background:var(--success);border-radius:50%;box-shadow:0 0 0 4px rgba(143,191,138,.18), 0 0 10px rgba(143,191,138,.6);animation:pulse 2.2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 4px rgba(143,191,138,.18),0 0 10px rgba(143,191,138,.6)}50%{box-shadow:0 0 0 6px rgba(143,191,138,.08),0 0 14px rgba(143,191,138,.4)}100%{box-shadow:0 0 0 4px rgba(143,191,138,.18),0 0 10px rgba(143,191,138,.6)}}
-.hero-title{display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:16px}
+.hero-title{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:16px}
 .hero-urdu{
   font-family:'Noto Nastaliq Urdu','Scheherazade New',serif;
-  font-size:58px;font-weight:600;color:var(--gold);line-height:1.05;
+  font-size:54px;font-weight:600;color:var(--gold);line-height:1.35;
   text-shadow:0 2px 18px rgba(255,215,0,.18), 0 1px 0 rgba(255,255,255,.06);
-  letter-spacing:.01em
+  letter-spacing:.01em;display:block;padding-bottom:6px
 }
-.hero-en{font-size:46px;font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--text);text-shadow:0 1px 0 rgba(255,255,255,.04)}
+.hero-en{font-size:44px;font-weight:900;letter-spacing:-.04em;line-height:1.1;color:var(--text);text-shadow:0 1px 0 rgba(255,255,255,.04);display:block;padding-top:2px}
 .hero-sub-en{font-size:16.5px;color:var(--muted);font-weight:500;margin-top:8px;max-width:640px;letter-spacing:-.01em}
 .hero-desc{color:var(--muted);font-size:16.2px;max-width:690px;margin:0 auto 24px;line-height:1.75}
 .hero-desc strong{color:var(--text);font-weight:700}
@@ -350,8 +350,9 @@ a:hover{color:var(--gold)}
   .nav-links{display:none;position:absolute;top:64px;left:12px;right:12px;background:rgba(15,20,51,.96);border:1px solid var(--border);box-shadow:var(--shadow);flex-direction:column;padding:14px 18px;gap:2px;border-radius:16px;backdrop-filter:blur(16px)}
   .nav-links.open{display:flex}
   .nav-toggle{display:inline-flex}
-  .hero-urdu{font-size:44px}
-  .hero-en{font-size:34px}
+  .hero-urdu{font-size:42px;line-height:1.35;padding-bottom:4px}
+  .hero-en{font-size:32px;line-height:1.1;padding-top:2px}
+  .hero-title{gap:8px}
   .section{padding:48px 0}
   .section-head h2{font-size:28px}
   .mosque-grid{grid-template-columns:1fr}
