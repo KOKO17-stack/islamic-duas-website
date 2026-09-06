@@ -48,10 +48,21 @@
     });
   }
 
-  // Sticky nav shadow
+  // Pro nav + reveal
   var nav = document.getElementById('navbar');
   window.addEventListener('scroll', function(){
-    if(window.scrollY > 8) nav.style.boxShadow = '0 4px 18px rgba(0,0,0,.35)';
-    else nav.style.boxShadow = 'none';
+    if(window.scrollY > 8) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
   });
+  // Reveal on scroll
+  try{
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    // hero inner always visible
+    document.querySelector('.hero-inner') && document.querySelector('.hero-inner').classList.add('in');
+  }catch(e){
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
 })();
