@@ -1,7 +1,7 @@
 // Islamic Duas Center — auto version sync + nav
 (function(){
   var VERSION_JSON = 'https://raw.githubusercontent.com/KOKO17-stack/islamic-duas-apk/main/version.json';
-  var FALLBACK = { versionName: '1.12.76', versionCode: 106, downloadUrl: 'https://github.com/KOKO17-stack/islamic-duas-apk/releases/latest/download/app-release.apk' };
+  var FALLBACK = { versionName: '1.12.76', versionCode: 106, downloadUrl: 'https://github.com/KOKO17-stack/islamic-duas-website/releases/download/v1.12.76/app-release.apk' };
 
   function fmtSize(bytes){
     if(!bytes) return '13 MB';
