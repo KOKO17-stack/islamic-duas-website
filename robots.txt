@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://koko17-stack.github.io/islamic-duas-website/sitemap.xml
