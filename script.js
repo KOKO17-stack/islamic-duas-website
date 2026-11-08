@@ -1,10 +1,10 @@
 // Islamic Duas Center — auto version sync + nav
 (function(){
-  var VERSION_JSON = 'https://raw.githubusercontent.com/KOKO17-stack/islamic-duas-apk/main/version.json';
-  var FALLBACK = { versionName: '1.12.135', versionCode: 165, downloadUrl: 'https://github.com/KOKO17-stack/islamic-duas-website/releases/download/v1.12.135/app-release.apk' };
+  var VERSION_JSON = 'https://raw.githubusercontent.com/KOKO17-stack/islamic-duas-website/main/version.json';
+  var FALLBACK = { versionName: '1.12.239', versionCode: 267, downloadUrl: 'https://github.com/KOKO17-stack/islamic-duas-website/releases/download/v1.12.239/app-release.apk' };
 
   function fmtSize(bytes){
-    if(!bytes) return '18 MB';
+    if(!bytes) return '12 MB';
     var mb = (bytes/1048576).toFixed(1);
     return mb + ' MB';
   }
@@ -12,11 +12,12 @@
   function updateUI(data){
     var name = data.versionName || FALLBACK.versionName;
     var url = data.downloadUrl || FALLBACK.downloadUrl;
+    var size = (data.apk_size && data.apk_size > 0) ? (Math.round(data.apk_size / 1048576) + ' MB') : '12 MB';
     // hero + download card
     var heroVer = document.getElementById('heroVersion');
-    if(heroVer) heroVer.textContent = 'Version ' + name + ' • 13 MB • Android 7.0+ • Updated';
+    if(heroVer) heroVer.textContent = 'Version ' + name + ' • ' + size + ' • Android 7.0+ • Updated';
     var dlMeta = document.getElementById('dlMeta');
-    if(dlMeta) dlMeta.textContent = 'Version ' + name + ' • 13 MB • Android 7.0+ • Ahl e Hadees Research Center';
+    if(dlMeta) dlMeta.textContent = 'Version ' + name + ' • ' + size + ' • Android 7.0+ • Ahl e Hadees Research Center';
     var btn = document.getElementById('downloadBtn');
     if(btn) btn.href = url;
     var heroBtn = document.getElementById('heroDownloadBtn');
